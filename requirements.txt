@@ -1,0 +1,12 @@
+langchain==0.2.9
+langchain-core==0.2.23
+langchain-openai==0.1.17
+qdrant-client
+streamlit
+python-docx
+PyPDF2
+python-pptx
+langchain-qdrant
+matplotlib
+plotly
+scikit-learn
