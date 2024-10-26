@@ -2,7 +2,7 @@
 
 Este projeto consiste em um app de chatbot utilizando `streamlit`. O objetivo é permitir que o usuário possa consultar informações dinâmicas sobre os processos (*timeseries*) e em informações de documentos.
 
-1. ### Descritivo de arquitetura simplificado:
+### Descritivo de arquitetura simplificado:
 
 A Figura abaixo descreve a arquitetura utilizada par agestão de informações.
 
