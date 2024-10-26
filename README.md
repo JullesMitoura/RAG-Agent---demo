@@ -23,6 +23,11 @@ A Figura abaixo descreve a arquitetura utilizada par agestão de informações.
 
 1.	O usuário envia uma pergunta ao Agent.
 2.	O Agent consulta a HXTool e o vDB conforme necessário:
-•	A HXTool é utilizada para acessar dados técnicos e de processo.
-•	O vDB fornece contexto adicional de documentos para enriquecer a resposta.
+
+
+- A HXTool é utilizada para acessar dados técnicos e de processo.
+  
+- O vDB fornece contexto adicional de documentos para enriquecer a resposta.
+
+
 3.	Após reunir o contexto e os dados necessários, o Agent compila e gera a Final Answer, retornando-a ao usuário.
