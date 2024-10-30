@@ -1,4 +1,7 @@
 import streamlit as st
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 from app.services.rag_service import RagService
 from app.services.qdrant_service import QdrantService
 import os

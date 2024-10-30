@@ -20,7 +20,7 @@ class CustomAgent:
         context = ""
         try:
             qdrant = Qdrant(self.client, collection, self.embedding)
-            search_results = qdrant.similarity_search(query=user_input, k=10)
+            search_results = qdrant.similarity_search(query=user_input, k=3)
             
             if search_results:
                 context = "\n\n".join(f"{i}\n{res.page_content}" for i, res in enumerate(search_results))
@@ -30,7 +30,6 @@ class CustomAgent:
             print(f"Error during similarity search: {e}")
             context = "There was an error processing your request."
         
-        print(context)
         prompt = ChatPromptTemplate.from_messages([
             ('system', f'''Today is {today} and the current time is {current_time}.
                            Information obtained from searches in RAG is provided here and may help answer the user's question: {context}.
@@ -48,6 +47,11 @@ class CustomAgent:
                                        tools=tools, verbose=True)
         self.agent_executor = agent_executor
         
-        response = self.agent_executor.invoke(input={"input": user_input})
+
+        response = self.agent_executor.invoke(input={"input": user_input}).get('output', "No output received.")
         
-        return response.get('output', "No output received.")
+        return {
+            "response": response,
+            "tool_name": "HXM",
+            "RAGContext": context
+        }
