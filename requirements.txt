@@ -10,3 +10,5 @@ langchain-qdrant
 matplotlib
 plotly
 scikit-learn
+fastapi==0.115.3
+uvicorn==0.32.0

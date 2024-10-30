@@ -1,6 +1,5 @@
 import streamlit as st
-from app.agent import CustomAgent
-from app.services.qdrant_service import QdrantService
+from app.services.agent import CustomAgent
 
 def chat(selected_collection):
     if "messages" not in st.session_state.keys():

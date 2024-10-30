@@ -1,8 +1,7 @@
 import streamlit as st
-from app.pages.third import rag_page
-from app.pages.first import dashboard
-from app.pages.chatbot import chat
-from app.agent import CustomAgent
+from pages.third import rag_page
+from pages.first import dashboard
+from pages.chatbot import chat
 from app.services.qdrant_service import QdrantService
 
 st.set_page_config(layout="wide")
